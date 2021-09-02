@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  workplace:
+    build: ./workspace
+    ports:
+      - "8081:80"
+    volumes:
+      - "/Users/aaron/DockerLearn/docker-compose/laravel-counter/laravel:/var/www/html/laravel"
+
+  redis:
+    image: "redis:alpine"
